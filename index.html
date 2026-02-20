@@ -417,6 +417,10 @@ const CATEGORIES = [
   }
 ];
 
+// Precomputed — data is static, no need to recalculate on every keystroke
+const TOTAL_TERMS = CATEGORIES.reduce((s, c) => s + c.terms.length, 0);
+
+// filter is already lowercased by the caller
 function renderAll(filter) {
   const container = document.getElementById('categories');
   container.innerHTML = '';
@@ -453,9 +457,8 @@ function renderAll(filter) {
     container.appendChild(section);
   });
 
-  const total = CATEGORIES.reduce((s, c) => s + c.terms.length, 0);
   document.getElementById('counter').textContent =
-    filter ? `${totalVisible} из ${total}` : `${total} терминов`;
+    filter ? `${totalVisible} из ${TOTAL_TERMS}` : `${TOTAL_TERMS} терминов`;
 
   const noResults = document.getElementById('no-results');
   if (totalVisible === 0 && filter) {
