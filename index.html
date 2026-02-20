@@ -4,35 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Шпаргалка — Нейрограмотность</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<div class="screen-wrap">
+  <div class="pipboy" role="application" aria-label="Pip-Boy Нейрограмотность">
 
-<header>
-  <div class="header-inner">
-    <h1 class="logo">⚡ <span>Нейрограмотность</span> — шпаргалка</h1>
-    <div class="search-wrap">
-      <label for="search" class="sr-only">Поиск по терминам</label>
-      <input type="search" id="search" placeholder="Поиск по терминам..." autocomplete="off" />
+    <nav class="nav-tabs" id="nav-tabs" role="tablist" aria-label="Категории"></nav>
+
+    <div class="subnav" id="subnav">
+      <span class="subnav-section">ШПАРГАЛКА</span>
+      <span class="subnav-active" id="subnav-cat">AI-МОДЕЛИ</span>
+      <span class="subnav-item">ПОИСК</span>
     </div>
-    <div class="counter" id="counter"></div>
+
+    <div class="content">
+      <div class="list-col">
+        <div class="search-row">
+          <span class="search-prompt" aria-hidden="true">&gt;_</span>
+          <label for="search" class="sr-only">Поиск по терминам</label>
+          <input type="search" id="search" placeholder="ПОИСК..." autocomplete="off" spellcheck="false">
+        </div>
+        <div class="list-panel" id="list-panel" role="listbox" aria-label="Список терминов"></div>
+      </div>
+      <div class="detail-col">
+        <div class="detail-img-wrap" id="detail-img-wrap"></div>
+        <div class="detail-text" id="detail-text">
+          <div class="detail-name" id="detail-name"></div>
+          <div class="detail-def"  id="detail-def"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="statusbar" aria-hidden="true">
+      <span id="status-hp">HP 0/0</span>
+      <span class="status-sep" id="status-sep">LEVEL 1</span>
+      <div class="progress-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+      <span id="status-ap">AP 160/160</span>
+    </div>
+
   </div>
-</header>
-
-<main>
-  <div class="intro">
-    <strong>Все термины курса «Нейрограмотность» (spix.ru/ai-lectures)</strong> — 5 лекций,
-    8 категорий. Используй поиск, чтобы быстро найти нужное понятие.
-  </div>
-
-  <div id="categories"></div>
-  <div id="no-results" role="status" aria-live="polite">Ничего не найдено по запросу «<span id="query-display"></span>»</div>
-</main>
-
-<footer>
-  Курс <a href="https://spix.ru/ai-lectures" target="_blank" rel="noopener noreferrer">Нейрограмотность</a> · spix.ru · 2026
-</footer>
-
+</div>
 <script src="js/app.js"></script>
 </body>
 </html>

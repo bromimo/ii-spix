@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(claude /plugin marketplace add:*)",
+      "WebSearch",
+      "Bash(curl -s -L --connect-timeout 10 \"https://spix.ru/ai-lectures\" -o /tmp/spix_main.html)",
+      "Bash(curl:*)",
+      "WebFetch(domain:spix.ru)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(docker compose build:*)",
+      "Bash(docker compose:*)",
+      "Bash(node -e:*)",
+      "Bash(node --version:*)",
+      "Bash(pip3 list:*)",
+      "Bash(pip show:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
