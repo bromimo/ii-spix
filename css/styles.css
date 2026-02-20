@@ -358,6 +358,12 @@ body::before {
   width:      0%;
 }
 
+/* ── TEXT SELECTION ─────────────────────────────────── */
+::selection {
+  background: var(--green);
+  color:      var(--bg);
+}
+
 /* ── HIGHLIGHT ──────────────────────────────────────── */
 mark {
   background:    rgba(89,255,89,0.22);
