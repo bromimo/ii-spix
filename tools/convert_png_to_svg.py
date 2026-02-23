@@ -14,7 +14,7 @@ from PIL import Image
 
 IMG_DIR = Path(__file__).parent.parent / "img"
 OUT_W, OUT_H = 310, 310
-GREEN = (0x4D, 0xFF, 0x91)
+GREEN = (0x59, 0xFF, 0x59)
 
 SVG_TEMPLATE = (
     '<svg xmlns="http://www.w3.org/2000/svg" '
